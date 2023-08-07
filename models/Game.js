@@ -33,16 +33,16 @@ const gameSchema = new mongoose.Schema({
         type: String,
         enum: ["PC", "Nintendo", "PS4", "PS5", "XBOX"],
     },
-    boughtBy: {
+    boughtBy: [{
         type: mongoose.Types.ObjectId,
         ref: 'User'
-    },
+    }],
     owner: {
         type: mongoose.Types.ObjectId,
         ref: 'User'
     }
 });
 
-const Game = mongoose.models('Game', gameSchema);
+const Game = mongoose.model('Game', gameSchema);
 
-module.exporst = Game;
+module.exports = Game;
