@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const { authMiddleware } = require('./middlewares/authMiddleware');
 
 //! change DB name
-const databaseName = 'book-talk';
+const databaseName = 'gaming-team';
 
 const routes = require('./routes');
 
