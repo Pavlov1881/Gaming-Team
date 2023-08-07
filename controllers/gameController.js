@@ -14,6 +14,71 @@ router.get('/catalog', async (req, res) => {
     }
 });
 
+router.get('/:gameId/details', async (req, res) => {
+    try {
+        const gameId = req.params.gameId;
+        const userId = req.user._id;
+        const selectedGame = await gameService.getById(gameId).lean();
+
+        const isOwner = userId == selectedGame.owner;
+        const isBuyer = await gameService.isBuyer(gameId, userId);
+
+        res.render('games/details', { selectedGame, isOwner, isBuyer });
+    } catch (error) {
+        res.status(404).render('/games/catalog', { error: getErrorMessage(error) });
+    }
+});
+
+router.get('/:gameId/edit', isLogged, async (req, res) => {
+    try {
+        const gameId = req.params.gameId;
+        const selectedGame = await gameService.getById(gameId).lean();
+
+        res.render('games/edit', { selectedGame });
+
+    } catch (error) {
+        res.render(`games/${gameId}/edit`, { error: getErrorMessage(error) });
+    }
+});
+
+router.post('/:gameId/edit', isLogged, async (req, res) => {
+    try {
+        const gameId = req.params.gameId;
+        const gameData = req.body;
+
+        await gameService.edit(gameId, gameData);
+        res.redirect(`/games/${gameId}/details`);
+
+    } catch (error) {
+        res.render(`/games/${gameId}/details`, { error: getErrorMessage(error) });
+    }
+
+});
+
+router.get('/:gameId/delete', isLogged, async (req, res) => {
+    try {
+        const gameId = req.params.gameId;
+        await gameService.delete(gameId);
+
+        res.redirect('/games/catalog');
+    } catch (error) {
+        res.status(401).render(`games/${gameId}/details`, { error: getErrorMessage(error) });
+    }
+});
+
+router.get('/:gameId/buy', isLogged, async (req, res) => {
+    try {
+        const gameId = req.params.gameId;
+        const userId = req.user._id;
+
+        await gameService.buy(gameId, userId);
+        res.redirect(`/games/${gameId}/details`);
+
+    } catch (error) {
+        res.render(`games/${gameId}/details`, { error: getErrorMessage(error) });
+    }
+});
+
 router.get('/create-offer', isLogged, async (req, res) => {
     res.render('games/create');
 });
