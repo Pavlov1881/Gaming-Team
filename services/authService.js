@@ -6,7 +6,7 @@ const { SECRET } = require('../constants');
 
 exports.findByEmail = (email) => User.findOne({ email });
 
-exports.register = async (email, username, password, confirmPassword) => {
+exports.register = async (username, email, password, confirmPassword) => {
 
     //! validate password
     if (password.length <= 4) {
@@ -19,7 +19,7 @@ exports.register = async (email, username, password, confirmPassword) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    await User.create({ email, username, password: hashedPassword });
+    await User.create({ username, email, password: hashedPassword });
 
     // auto login after register
     return this.login(email, password);
