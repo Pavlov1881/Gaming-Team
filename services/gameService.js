@@ -24,7 +24,7 @@ exports.buy = async (gameId, userId) => {
 
 exports.search = async (name, platform) => {
 
-    let result = Game.find().lean();
+    let result = await Game.find().lean();
 
     if (name) {
         result = result.filter(game => game.name.toLowerCase().includes(name.toLowerCase()));
