@@ -21,3 +21,18 @@ exports.buy = async (gameId, userId) => {
     game.boughtBy.push(userId);
     game.save();
 };
+
+exports.search = async (name, platform) => {
+
+    let result = Game.find().lean();
+
+    if (name) {
+        result = result.filter(game => game.name.toLowerCase().includes(name.toLowerCase()));
+    }
+
+    if (platform) {
+        result = result.filter(game => game.platform.toLowerCase().includes(platform.toLowerCase()));
+    }
+
+    return result;
+}

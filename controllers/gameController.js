@@ -96,4 +96,30 @@ router.post('/create-offer', isLogged, async (req, res) => {
     }
 });
 
+router.get('/search', async (req, res) => {
+
+    try {
+        const result = await gameService.getAll().lean()
+
+        res.render('games/search', { result });
+
+    } catch (error) {
+        res.status(400).render('games/search', { error: getErrorMessage(error) });
+    }
+});
+
+router.post('/search', async (req, res) => {
+
+    try {
+        const { name, platform } = req.body;
+
+        const result = await gameService.search(name, platform);
+
+        res.render('games/search', { result });
+
+    } catch (error) {
+
+    }
+});
+
 module.exports = router;
