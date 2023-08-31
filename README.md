@@ -39,15 +39,25 @@ The application should provide **users** (logged-in) with the functionality to:
 
 ## Security features
 •	Guests (not logged-in) can access the home page.
+
 •	Guests (not logged-in) can access the login page and functionality.
+
 •	Guests (not logged-in) can access the register page and functionality.
+
 •	Guests (not logged-in) and users (logged-in) can access the All Games Code (where all game offers are listed).
+
 •	Guests (not logged-in) can access the details page without functionality.
+
 •	Logged-in users can access the home page.
+
 •	Logged-in users can access the details page and functionality.
+
 •	Logged-in users (not the owner of the current offer) can buy the game code.
+
 •	The logged-in owner of the current game offer can edit and delete it.
+
 •	Logged-in users can access Create Game Offer page and functionality.
+
 •	Logged-in users can access logout functionality.
 
 
