@@ -25,6 +25,9 @@ The application should provide **users** (logged-in) with the functionality to:
 ### Home Page (Guests and Logged-in Users) 
 ![home-page](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/home-page.png)
 
+### Game Catalog (Guests and Logged-in Users)
+![catalog](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/game-catalog.png)
+
 
 
 
