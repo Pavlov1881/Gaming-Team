@@ -37,6 +37,35 @@ The application should provide **users** (logged-in) with the functionality to:
 ### Register Page (Guests)
 ![register-pate](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/register-page.png)
 
+## Database Models 
+
+**User**
+
+•	username: string (required),
+
+•	email: string (required),
+
+•	password: string (required)
+
+**Game**
+
+•	name: string (required),
+
+•	image: string (required),
+
+•	price: number (required),
+
+•	description: string (required),
+
+•	genre: string (required),
+
+•	platform: string (required; one of the following: "PC", "Nintendo", "PS4", "PS5", "XBOX"),
+
+•	boughtBy: a collection (array) of users (references to the "User" model)
+
+•	owner: object ID (a reference to the "User" model)
+
+
 ## << Security features >>
 •	Guests (not logged-in) can access the home page.
 
@@ -63,6 +92,7 @@ The application should provide **users** (logged-in) with the functionality to:
 ## << Validation and Error Handling >>
 
 **User**
+
 •	The username should be at least five characters long.
 
 •	The email should be at least ten character long.
