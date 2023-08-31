@@ -37,7 +37,7 @@ The application should provide **users** (logged-in) with the functionality to:
 ### Register Page (Guests)
 ![register-pate](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/register-page.png)
 
-## Security features
+## => Security features
 •	Guests (not logged-in) can access the home page.
 
 •	Guests (not logged-in) can access the login page and functionality.
