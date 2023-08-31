@@ -23,6 +23,7 @@ The application should provide **users** (logged-in) with the functionality to:
 ## Application Pages
 
 ### Home Page (Guests and Logged-in Users) 
+![home-page](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/home-page.png)
 
 
 
