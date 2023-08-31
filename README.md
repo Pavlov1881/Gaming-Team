@@ -7,11 +7,17 @@ The visitors can view the home page and All Games Code catalog with the availabl
 The application provide **guests** (not logged-in users) with the functionality to **login**, **register**, and view the home page, the All Games Code page, and the details page.
 
 The application should provide users (logged-in) with the functionality to:
+
 •	view the home page and all the other pages with logged-in navigation;
+
 •	view the All Games Code page;
+
 •	create а new game offer (Create Game Offer);
+
 •	access the game details pages (Details);
+
 •	buy games (if the current user is not the owner of the offer);
+
 •	delete or edit the offer depending on the user's authentication (only for the owner of the current game offer).
 
 
