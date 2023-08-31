@@ -29,7 +29,7 @@ The application should provide **users** (logged-in) with the functionality to:
 ![catalog](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/game-catalog.png)
 
 ### Details Page (Guests)
-[details-guests](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/details%20page%20-%20guests.png)
+![details-guests](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/details%20page%20-%20guests.png)
 
 
 
