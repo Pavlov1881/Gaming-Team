@@ -31,6 +31,26 @@ The application should provide **users** (logged-in) with the functionality to:
 ### Details Page (Guests)
 ![details-guests](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/details%20page%20-%20guests.png)
 
+### Login Page (Guests)
+![login-page](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/login-page.png)
+
+### Register Page (Guests)
+![register-pate](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/register-page.png)
+
+## Security features
+•	Guests (not logged-in) can access the home page.
+•	Guests (not logged-in) can access the login page and functionality.
+•	Guests (not logged-in) can access the register page and functionality.
+•	Guests (not logged-in) and users (logged-in) can access the All Games Code (where all game offers are listed).
+•	Guests (not logged-in) can access the details page without functionality.
+•	Logged-in users can access the home page.
+•	Logged-in users can access the details page and functionality.
+•	Logged-in users (not the owner of the current offer) can buy the game code.
+•	The logged-in owner of the current game offer can edit and delete it.
+•	Logged-in users can access Create Game Offer page and functionality.
+•	Logged-in users can access logout functionality.
+
+
 
 
 
