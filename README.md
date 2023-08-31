@@ -20,7 +20,7 @@ The application should provide **users** (logged-in) with the functionality to:
 
 •	delete or edit the offer depending on the user's authentication (only for the owner of the current game offer).
 
-## Application Pages
+## << Application Pages >>
 
 ### Home Page (Guests and Logged-in Users) 
 ![home-page](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/home-page.png)
@@ -37,7 +37,7 @@ The application should provide **users** (logged-in) with the functionality to:
 ### Register Page (Guests)
 ![register-pate](https://github.com/Pavlov1881/Gaming-Team/blob/main/public/images/register-page.png)
 
-## => Security features
+## << Security features >>
 •	Guests (not logged-in) can access the home page.
 
 •	Guests (not logged-in) can access the login page and functionality.
@@ -59,6 +59,32 @@ The application should provide **users** (logged-in) with the functionality to:
 •	Logged-in users can access Create Game Offer page and functionality.
 
 •	Logged-in users can access logout functionality.
+
+## << Validation and Error Handling >>
+
+**User**
+•	The username should be at least five characters long.
+
+•	The email should be at least ten character long.
+
+•	The password should be at least four characters long.
+
+•	The password confirmation should be equal to the password.
+ 
+**Game**
+
+•	The platform must be one of the following options: "PC", "Nintendo", "PS4", "PS5", "XBOX".
+
+•	The name should be at least four characters.
+
+•	The game image should start with "http://" or "https://".
+
+•	The price should be a positive number.
+
+•	The genre should be at least two characters long.
+
+•	The description should be at least ten characters long.
+
 
 
 
